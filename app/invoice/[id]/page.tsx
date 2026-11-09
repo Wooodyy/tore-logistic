@@ -14,28 +14,7 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import Decimal from "decimal.js"
 
-interface InvoiceData {
-  id: number
-  container_number: string | null
-  invoice_number: string | null
-  invoice_date: string | null
-  invoice_status: boolean | null
-  consignor: string | null
-  consignee: string | null
-  sender_address: string | null
-  recipient_address: string | null
-  items: Array<{
-    id: number
-    code: string | null
-    goods_name: string | null
-    places: number | null
-    weight: string | null  // Текстовое значение из БД для сохранения полной точности
-    value_amount: string | null  // Текстовое значение из БД для сохранения полной точности
-    currency: string | null
-    packaging_type: string | null
-    packaging_info: boolean | null
-  }>
-}
+
 
 function InvoicePage() {
   const router = useRouter()
