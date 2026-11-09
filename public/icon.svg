@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <linearGradient id="cubeTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#e0e7ff" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="cubeLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c7d2fe" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#a5b4fc" stop-opacity="0.75" />
+    </linearGradient>
+    <linearGradient id="cubeRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.8" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#312e81" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background container badge -->
+  <rect width="512" height="512" rx="128" fill="url(#bg)" />
+
+  <!-- Inner border glow -->
+  <rect x="12" y="12" width="488" height="488" rx="116" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="6" />
+
+  <!-- Logistics 3D Hexagon/Isometric Cube + Speed Trails -->
+  <g filter="url(#shadow)" transform="translate(0, 0)">
+    <!-- Top Face -->
+    <path d="M256 120 L376 190 L256 260 L136 190 Z" fill="url(#cubeTop)" />
+    <!-- Tape / Ribbon on Top -->
+    <path d="M226 137.5 L346 207.5 L316 225 L196 155 Z" fill="#6366f1" fill-opacity="0.22" />
+
+    <!-- Left Face (Container Ribs) -->
+    <path d="M136 190 L256 260 L256 392 L136 322 Z" fill="url(#cubeLeft)" />
+    <!-- Container rib lines on left face -->
+    <path d="M166 207.5 L166 339.5 M196 225 L196 357 M226 242.5 L226 374.5" stroke="#4338ca" stroke-opacity="0.28" stroke-width="4.5" stroke-linecap="round" />
+
+    <!-- Right Face (Container Ribs + Cargo Arrow) -->
+    <path d="M256 260 L376 190 L376 322 L256 392 Z" fill="url(#cubeRight)" />
+    <!-- Container rib lines on right face -->
+    <path d="M286 242.5 L286 374.5 M316 225 L316 357 M346 207.5 L346 339.5" stroke="#1e1b4b" stroke-opacity="0.22" stroke-width="4.5" stroke-linecap="round" />
+
+    <!-- Center Edges -->
+    <path d="M256 260 L256 392 M136 190 L256 260 L376 190" fill="none" stroke="#ffffff" stroke-width="3" stroke-opacity="0.4" />
+
+    <!-- Sleek Logistic Arrow overlay -->
+    <path d="M220 220 L275 252 L260 258 L285 272 L275 288 L250 274 L244 290 Z" fill="#ffffff" fill-opacity="0.9" />
+  </g>
+</svg>
